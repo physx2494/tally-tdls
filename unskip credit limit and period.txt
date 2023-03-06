@@ -1,0 +1,44 @@
+[#Field: LED Mobile]
+	Valid:  If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then NOT $$IsEmpty:$$Value Else True
+
+[#Field: LEDCreditPer]
+	;Valid:  NOT $$IsEmpty:$$Value AND $$IsBelongsTo:$$GroupSundryDebtors
+	;Inactive: $$IsBelongsTo:$$GroupSundryDebtors
+	Valid: If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then NOT $$IsEmpty:$$Value Else True
+	Skip : If $$InAltermode Then True Else False
+	
+[#Field: LEDLimit]
+	Valid:  If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then NOT $$IsEmpty:$$Value Else True
+	Skip : If $$InAltermode Then True Else False
+	
+[#Field: LEDContact]
+	Valid:  If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then NOT $$IsEmpty:$$Value Else True
+	
+[#Field: LEDEmail]
+	Valid:  If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then NOT $$IsEmpty:$$Value Else True
+	
+[#Field: LED CreditVchEntry]
+	Set Always: Yes
+	Set As : Yes
+	Valid:  $$Value
+	;Skip: $$Owner:$$InAlterMode
+	
+[#Line: VCFG ORCrLimit2]
+
+	;Local   	: Field : Logical Field: Set as    	: If NOT $(Company, ##SvCurrentCompany).IsBudgetsOn  Then No Else $OverRideCreditLimit
+	;Local   	: Field : Logical Field: Set Always	: Yes
+	Local	: Field	: Logical Field	: Set As : No
+	Local	: Field	: Logical Field	: Set Always : No
+	Local	: Field	: Logical Field	: Valid: Not $$Value
+	;Local	: Field	: Logical Field	: Skip: $$Owner:$$InAlterMode
+
+	
+[#Line:	LED Contact Details]
+
+	Local	: Field	: Logical Field	: Set As : Yes
+	Local	: Field	: Logical Field	: Set Always : Yes
+	Local	: Field	: Logical Field	: Valid:  $$Value
+	
+	;Local	: Field	: Logical Field	: Set As : If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then Yes Else No
+	;Local	: Field	: Logical Field	: Set Always : If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then Yes Else No
+	;Local	: Field	: Logical Field	: Valid:  If ($$IsBelongsTo:$$GroupSundryCreditors OR $$IsBelongsTo:$$GroupSundryDebtors) Then $$Value Else Not $$Value
