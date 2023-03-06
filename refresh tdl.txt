@@ -1,0 +1,19 @@
+[#Menu :Gate way of Tally]
+Add :Button :Refresh TDL
+
+[Button :Refresh TDL]
+Title :"Refresh TDL"
+Key :Alt+X
+Action :Refresh TDL
+
+[System :Form keys]
+Key :Refresh TDL
+
+[System :Menu Keys]
+Key :Refresh TDL
+
+[#Form :Default]
+Key :Refresh TDL
+
+[#Menu :Default]
+Key :Refresh TDL
