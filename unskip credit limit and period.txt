@@ -25,8 +25,8 @@
 	
 [#Line: VCFG ORCrLimit2]
 
-	;Local   	: Field : Logical Field: Set as    	: If NOT $(Company, ##SvCurrentCompany).IsBudgetsOn  Then No Else $OverRideCreditLimit
-	;Local   	: Field : Logical Field: Set Always	: Yes
+	;Local   : Field : Logical Field: Set as    	: If NOT $(Company, ##SvCurrentCompany).IsBudgetsOn  Then No Else $OverRideCreditLimit
+	;Local   : Field : Logical Field: Set Always	: Yes
 	Local	: Field	: Logical Field	: Set As : No
 	Local	: Field	: Logical Field	: Set Always : No
 	Local	: Field	: Logical Field	: Valid: Not $$Value
