@@ -1,6 +1,6 @@
 # Tally TDL Snippets
 
-A collection of useful Tally utilities that enhances the vanilla Tally experiance
+A collection of useful Tally utilities that enhances the vanilla Tally experience
 
 ## Getting Started
 
@@ -23,5 +23,3 @@ The things you need before installing the software.
 ## Additional Documentation and Acknowledgments
 
 * Grateful for this excellent site: http://tdlexpert.com/index.php
-
-Some useful Tally TDLs that I've made for my use case. Feel free to fork or contribute. I'll be adding more advanced features on top.
