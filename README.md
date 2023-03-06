@@ -1,6 +1,6 @@
 # Tally TDL Snippets
 
-A collection of useful Tally utilities that enhances the vanilla Tally experience
+A collection of useful Tally utilities that enhances the vanilla Tally experience. Feel free to fork. PRs welcome.
 
 ## Getting Started
 
